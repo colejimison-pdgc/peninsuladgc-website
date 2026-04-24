@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Peninsula Disc Golf Club</title>
+  <meta name="description" content="Learn about the Peninsula Disc Golf Club — a 501(c)(3) non-profit dedicated to growing disc golf on the Peninsula since 2014.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .board-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    .board-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .board-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--forest-mid), var(--meadow));
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+    .board-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--forest-dark);
+      margin-bottom: 0.25rem;
+    }
+    .board-card .role {
+      font-size: 0.78rem;
+      color: var(--meadow);
+      font-weight: 500;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .membership-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .membership-table th {
+      background: var(--forest-dark);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 1rem 1.25rem;
+      text-align: left;
+    }
+    .membership-table td {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+    }
+    .membership-table tr:last-child td { border-bottom: none; }
+    .membership-table tr:hover td { background: var(--sky); }
+    .check { color: var(--meadow); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Who We Are</div>
+    <h1>About<br>the Club</h1>
+    <p>A non-profit community organization dedicated to growing disc golf on the Peninsula since 2014.</p>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section class="section">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="about-mission-grid">
+    <div>
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title" style="margin-bottom:1.5rem">Building a thriving disc golf <em>community</em></h2>
+      <p style="color:var(--text-mid);line-height:1.8;margin-bottom:1rem;font-size:0.95rem">
+        The Peninsula Disc Golf Club is a 501(c)(3) non-profit organization founded in 2014 by a small group of passionate players who saw the potential for disc golf to become a cornerstone of outdoor recreation on the Peninsula.
+      </p>
+      <p style="color:var(--text-mid);line-height:1.8;margin-bottom:1rem;font-size:0.95rem">
+        Our mission is to promote, develop, and sustain disc golf on the Peninsula through community events, course stewardship, youth education, and advocacy for new course development. We believe disc golf has a unique power to bring people together across generations and backgrounds.
+      </p>
+      <p style="color:var(--text-mid);line-height:1.8;font-size:0.95rem">
+        Every dollar raised through membership dues, tournament entry fees, and donations goes directly back into the community — maintaining existing courses, funding new installations, and supporting programs that put discs in the hands of young players.
+      </p>
+    </div>
+    <div class="values-grid" style="margin-top:2rem">
+      <div class="value-card" style="background:var(--white);border-color:var(--border)">
+        <div class="value-icon">🤝</div>
+        <h4 style="color:var(--meadow)">Inclusivity</h4>
+        <p style="color:var(--text-light)">Disc golf is for everyone. We actively welcome players of all ages, backgrounds, and skill levels.</p>
+      </div>
+      <div class="value-card" style="background:var(--white);border-color:var(--border)">
+        <div class="value-icon">🌲</div>
+        <h4 style="color:var(--meadow)">Stewardship</h4>
+        <p style="color:var(--text-light)">We are committed to maintaining and improving the natural spaces where we play.</p>
+      </div>
+      <div class="value-card" style="background:var(--white);border-color:var(--border)">
+        <div class="value-icon">👥</div>
+        <h4 style="color:var(--meadow)">Community</h4>
+        <p style="color:var(--text-light)">Every event, league, and workday is an opportunity to build lasting connections.</p>
+      </div>
+      <div class="value-card" style="background:var(--white);border-color:var(--border)">
+        <div class="value-icon">📈</div>
+        <h4 style="color:var(--meadow)">Growth</h4>
+        <p style="color:var(--text-light)">Committed to expanding disc golf courses throughout San Mateo County.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOARD -->
+<div style="background:var(--forest-dark);padding:5rem 2rem" id="board">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-label" style="color:var(--lime)"><span style="background:var(--lime);display:inline-block;width:24px;height:2px;margin-right:0.75rem"></span>Leadership</div>
+    <h2 class="section-title" style="color:var(--white);margin-bottom:0.5rem">Meet the <em>Board</em></h2>
+    <p style="color:rgba(255,255,255,0.55);font-size:0.9rem;margin-bottom:0">The volunteers who keep the club running</p>
+
+    <div class="board-grid">
+      <div class="board-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+        <div class="board-avatar">👤</div>
+        <h3 style="color:var(--white)">President</h3>
+        <div class="role">Club President</div>
+      </div>
+      <div class="board-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+        <div class="board-avatar">👤</div>
+        <h3 style="color:var(--white)">Vice President</h3>
+        <div class="role">Vice President</div>
+      </div>
+      <div class="board-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+        <div class="board-avatar">👤</div>
+        <h3 style="color:var(--white)">Treasurer</h3>
+        <div class="role">Treasurer</div>
+      </div>
+      <div class="board-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+        <div class="board-avatar">👤</div>
+        <h3 style="color:var(--white)">Secretary</h3>
+        <div class="role">Secretary</div>
+      </div>
+      <div class="board-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+        <div class="board-avatar">👤</div>
+        <h3 style="color:var(--white)">Events Director</h3>
+        <div class="role">Events Director</div>
+      </div>
+    </div>
+    <p style="color:rgba(255,255,255,0.35);font-size:0.78rem;margin-top:1.5rem;font-style:italic">Board member names and photos can be updated in this section.</p>
+  </div>
+</div>
+
+<!-- MEMBERSHIP -->
+<section class="section">
+  <div class="section-label">Join the Club</div>
+  <h2 class="section-title" style="margin-bottom:0.5rem">Membership <em>Benefits</em></h2>
+  <p style="color:var(--text-light);font-size:0.9rem">Annual memberships help fund course maintenance, events, and youth programs.</p>
+
+  <table class="membership-table">
+    <thead>
+      <tr>
+        <th>Benefit</th>
+        <th>Individual ($40/yr)</th>
+        <th>Family ($60/yr)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Discounted tournament entry</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Members-only events</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Email newsletter & early registration</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Free beginner clinics</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Family members covered</td>
+        <td style="color:var(--text-light)">—</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Voting rights at annual meeting</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:2rem;text-align:center">
+    <a href="mailto:info@peninsuladgc.org" class="btn btn-primary">Contact Us to Join →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" style="padding-top:0">
+  <div class="section-label">Get in Touch</div>
+  <h2 class="section-title" style="margin-bottom:2rem">Contact <em>Us</em></h2>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Email</h3>
+      <a href="mailto:info@peninsuladgc.org">info@peninsuladgc.org</a>
+
+      <h3>Location</h3>
+      <p>San Mateo County, California<br>Serving the greater Peninsula area</p>
+
+      <h3>PDGA Club Number</h3>
+      <p>C12345</p>
+
+      <h3>Founded</h3>
+      <p>2014 · 501(c)(3) Non-Profit Organization</p>
+    </div>
+    <div style="background:var(--forest-dark);border-radius:var(--radius-lg);padding:2.5rem;color:white">
+      <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;color:var(--lime)">Have Questions?</h3>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.8;margin-bottom:1.5rem">
+        Whether you want to get involved, sponsor an event, report a course issue, or just say hi — we'd love to hear from you. We're all volunteers, so responses may take a day or two.
+      </p>
+      <a href="mailto:info@peninsuladgc.org" class="btn btn-primary" style="width:100%;justify-content:center">Send Us an Email →</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/shared-sub.js"></script>
+<style>
+@media (max-width: 768px) {
+  .about-mission-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+}
+</style>
+</body>
+</html>
