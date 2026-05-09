@@ -4,7 +4,9 @@
 // ============================================================
 
 import { Link } from "wouter";
-import { Disc, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, MapPin, Facebook, Instagram } from "lucide-react";
+
+const LOGO_IMAGE = "/manus-storage/pdgc-logo-clean_5db369b8.png";
 
 export default function Footer() {
   return (
@@ -13,14 +15,8 @@ export default function Footer() {
       <div className="container py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand column */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-9 h-9 rounded-full bg-[oklch(0.65_0.16_48)] flex items-center justify-center flex-shrink-0">
-              <Disc className="w-5 h-5 text-white" strokeWidth={2} />
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-semibold text-white text-sm leading-none">Peninsula</div>
-              <div className="font-mono-brand text-[oklch(0.65_0.16_48)] text-[10px] tracking-widest uppercase leading-none mt-0.5">Disc Golf Club</div>
-            </div>
+          <div className="mb-4">
+            <img src={LOGO_IMAGE} alt="Peninsula Disc Golf Club" className="h-16 w-auto" />
           </div>
           <p className="font-body text-sm leading-relaxed text-white/60 max-w-xs">
             A non-profit organization dedicated to growing disc golf on the Peninsula — through community events, course stewardship, and youth outreach.

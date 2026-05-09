@@ -53,17 +53,19 @@ export default function BlogPost() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.85] via-[oklch(0.12_0.04_55)/0.3] to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 container pb-8">
-              <Link href="/blog" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to News & Blog
-              </Link>
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`event-tag ${categoryColors[post.category]}`}>
-                  {categoryLabels[post.category]}
-                </span>
+              <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8">
+                <Link href="/blog" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
+                  <ArrowLeft className="w-4 h-4" /> Back to News & Blog
+                </Link>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`event-tag ${categoryColors[post.category]}`}>
+                    {categoryLabels[post.category]}
+                  </span>
+                </div>
+                <h1 className="font-display text-3xl md:text-4xl font-semibold text-white max-w-3xl leading-tight">
+                  {post.title}
+                </h1>
               </div>
-              <h1 className="font-display text-3xl md:text-4xl font-semibold text-white max-w-3xl leading-tight">
-                {post.title}
-              </h1>
             </div>
           </div>
         </section>
@@ -173,7 +175,7 @@ export default function BlogPost() {
               <div className="bg-[oklch(0.22_0.04_55)] rounded-lg p-6 text-white">
                 <h3 className="font-display text-lg font-semibold mb-2">Join the Club</h3>
                 <p className="font-body text-sm text-white/70 mb-4">
-                  Become a member and support disc golf on the Peninsula. Individual membership is just $40/year.
+                  Become a member and support disc golf on the Peninsula.
                 </p>
                 <Link
                   href="/about"

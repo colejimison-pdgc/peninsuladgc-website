@@ -12,7 +12,7 @@ import type { Event } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const COURSE_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/course-scenic-f5bzDYBHMESqz9UzBZnzrH.webp";
+const COURSE_IMAGE = "/manus-storage/eh_ctp_hole9_5ce4862a.jpg";
 
 const categories: Array<{ value: string; label: string }> = [
   { value: "all", label: "All Events" },
@@ -56,11 +56,13 @@ export default function Events() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.12_0.04_55)/0.85] to-[oklch(0.12_0.04_55)/0.70]" />
         <div className="relative z-10 container">
-          <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Peninsula Disc Golf Club</p>
-          <h1 className="font-display text-5xl font-semibold text-white mb-3">Events Calendar</h1>
-          <p className="font-body text-white/70 max-w-xl text-lg">
-            Tournaments, weekly leagues, beginner clinics, and community events — there's always something happening on the Peninsula.
-          </p>
+          <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8 max-w-2xl">
+            <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Peninsula Disc Golf Club</p>
+            <h1 className="font-display text-5xl font-semibold text-white mb-3">Events Calendar</h1>
+            <p className="font-body text-white/70 max-w-xl text-lg">
+              Tournaments, weekly leagues, beginner clinics, and community events — there's always something happening on the Peninsula.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -106,7 +108,7 @@ export default function Events() {
             Object.entries(grouped).map(([month, monthEvents]) => (
               <div key={month} className="mb-12">
                 <div className="flex items-center gap-4 mb-6">
-                  <h2 className="font-display text-2xl font-semibold text-[oklch(0.22_0.04_55)]">{month}</h2>
+                  <h2 className="font-display text-2xl font-semibold text-[oklch(0.22_0.04_55)]">Active Events</h2>
                   <div className="flex-1 h-px bg-[oklch(0.86_0.025_85)]" />
                 </div>
 

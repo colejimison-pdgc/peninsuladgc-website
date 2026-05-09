@@ -54,13 +54,13 @@ export const events: Event[] = [
     location: "Emerald Hills Disc Golf Course, Redwood City",
     category: "league",
     description: "Flex start league every Tuesday and Thursday. All skill levels welcome. Play solo or in groups.",
-    longDescription: `Every Tuesday and Thursday there is a flex start league at the Emerald Hills Disc Golf Course in Redwood City. It's the perfect way to meet fellow disc golfers, improve your game, and enjoy a beautiful and well-maintained course.\n\nFormat: Flex start, meaning play anytime during the day. You are able to play in this league solo and be eligible for the league payouts. You must play in a group of 3 or more to be eligible for the ace pot.\n\nCost:\nBag tag: $25/year (also gets you discounted greens fees)\nLeague fee: $5 per round\nAce pot: $1 per round (optional)`,
+    longDescription: `Every Tuesday and Thursday there is a flex start league at the Emerald Hills Disc Golf Course in Redwood City. It's the perfect way to meet fellow disc golfers, improve your game, and enjoy a beautiful and well-maintained course.\n\nFormat: Flex start, meaning play anytime during the day. You are able to play in this league solo and be eligible for the league payouts. You must play in a group of 3 or more to be eligible for the ace pot.\n\nCost:\nBag Tag: $25/year (used for reduced green fees)\nLeague Fee: $5 per round\nAce Pot: $1 per round (optional)`,
     entryFee: "$5 league + $10 green fees (with bag tag)",
     registrationUrl: "https://udisc.com/events?courseId=9gK8YyTJsy3wBMwNX&quickFilter=league",
     registrationLabel: "Udisc Event",
     directionsUrl: "https://maps.app.goo.gl/jCxhowx5SmVsJvvE6",
     customDateDisplay: "Tuesdays and Thursdays from March 10 to June 11, 2026",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/action-throw-8i7pxpEA3rThZDTMFnR7Xm.webp",
+    image: "/manus-storage/eh_conrad_hole16_154a8af3.jpg",
     featured: true,
   },
 
@@ -79,7 +79,7 @@ export const events: Event[] = [
     registrationLabel: "Udisc Event",
     directionsUrl: "https://maps.app.goo.gl/a3NoNVeX1eCMUioi7",
     customDateDisplay: "Mondays from March 23 to September 14, 2026",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/action-throw-8i7pxpEA3rThZDTMFnR7Xm.webp",
+    image: "/manus-storage/vm_doubles_7009cbd4.webp",
     featured: true,
   },
 ];
@@ -291,7 +291,7 @@ Jim came up clutch yesterday with an impressive bogey-free -3 (59, UDisc 222) in
 Conrad has been on a tear all winter. His -12 (52, UDisc 265) on Tuesday matched Jon Sturholm's layout record from February 12.
 
 The Spring League starts on Tuesday March 10th. The league standings are reset. Get on out to the course and stake your claim as a 2026 Peninsula Disc Golf Club Spring League champion!`,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/course-scenic-f5bzDYBHMESqz9UzBZnzrH.webp",
+    image: "/manus-storage/eh_pond_hole3_c6545346.jpg",
   }
 ];
 

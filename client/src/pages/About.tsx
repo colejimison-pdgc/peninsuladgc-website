@@ -9,7 +9,7 @@ import { Heart, TreePine, Users, TrendingUp, ArrowRight, Mail } from "lucide-rea
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const ABOUT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/about-banner-XUFxTxxrgNTCiHnwjQMSdz.webp";
+const ABOUT_IMAGE = "/manus-storage/eh_devin_hole4_6c0dead2.jpg";
 const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/community-event-D6xB3opW72GX3UimDuQH5d.webp";
 
 const values = [
@@ -65,11 +65,13 @@ export default function About() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.12_0.04_55)/0.80] to-[oklch(0.12_0.04_55)/0.65]" />
         <div className="relative z-10 container">
-          <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Who We Are</p>
-          <h1 className="font-display text-5xl font-semibold text-white mb-3">About the Club</h1>
-          <p className="font-body text-white/70 max-w-xl text-lg">
-            A non-profit community organization dedicated to growing disc golf on the Peninsula since 2008.
-          </p>
+          <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8 max-w-2xl">
+            <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Who We Are</p>
+            <h1 className="font-display text-5xl font-semibold text-white mb-3">About the Club</h1>
+            <p className="font-body text-white/70 max-w-xl text-lg">
+              A non-profit community organization dedicated to growing disc golf on the Peninsula since 2008.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -82,10 +84,10 @@ export default function About() {
               Building a thriving disc golf community on the Peninsula
             </h2>
             <p className="font-body text-[oklch(0.35_0.04_55)] leading-relaxed mb-4">
-              The Peninsula Disc Golf Club was formed in 2008 and ran a couple of tournaments with temporary layouts at Pescadero Creek County Park. In September 2021, the club installed concrete teepads at the Emerald Hills Disc Golf Course, marking a major milestone in establishing permanent disc golf infrastructure on the Peninsula.
+              Our mission is to promote, develop, and sustain disc golf on the Peninsula through community events, course stewardship, youth education, and advocacy for new course development. We believe disc golf has a unique power to bring people together across generations and backgrounds.
             </p>
             <p className="font-body text-[oklch(0.35_0.04_55)] leading-relaxed">
-              Our mission is to promote, develop, and sustain disc golf on the Peninsula through community events, course stewardship, youth education, and advocacy for new course development. We believe disc golf has a unique power to bring people together across generations and backgrounds.
+              The Peninsula Disc Golf Club was formed in 2008 and ran a couple of tournaments with temporary layouts at Pescadero Creek County Park. In September 2021, the club installed concrete teepads at the Emerald Hills Disc Golf Course, marking a major milestone in establishing permanent disc golf infrastructure on the Peninsula.
             </p>
           </div>
 

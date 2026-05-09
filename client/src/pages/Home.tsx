@@ -10,13 +10,13 @@ import { categoryColors, categoryLabels } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/hero-disc-golf-cpKRzEWvR94HpCwcFp4WBw.webp";
+const HERO_IMAGE = "/manus-storage/harrison_hole2_639c76ec.jpg";
 const ACTION_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/action-throw-8i7pxpEA3rThZDTMFnR7Xm.webp";
 const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/community-event-D6xB3opW72GX3UimDuQH5d.webp";
 
 const stats = [
-  { icon: Users, value: "320+", label: "Active Members" },
-  { icon: TreePine, value: "2", label: "San Mateo County" },
+  { icon: Users, value: "1,000+", label: "Active Members" },
+  { icon: TreePine, value: "2", label: "Disc Golf Courses" },
 ];
 
 export default function Home() {
@@ -34,11 +34,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.92] via-[oklch(0.12_0.04_55)/0.45] to-transparent" />
 
         <div className="relative z-10 container pb-20 pt-32">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl bg-black/40 backdrop-blur-sm rounded-lg p-8">
 
-            <h1 className="font-display text-5xl md:text-7xl font-semibold text-white leading-tight mb-6 animate-fade-up">
-              Disc Golf on the{" "}
-              <span className="italic text-[oklch(0.82_0.14_48)]">Peninsula</span>
+            <h1 className="font-display text-5xl md:text-7xl font-semibold leading-tight mb-6 animate-fade-up">
+              <span className="text-white">Peninsula</span>{" "}
+              <span className="italic text-[oklch(0.82_0.14_48)]">Disc Golf Club</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-white/80 max-w-xl mb-8 animate-fade-up animate-fade-up-delay-1">
               A community-driven non-profit bringing players of all skill levels together through tournaments, leagues, clinics, and course stewardship.

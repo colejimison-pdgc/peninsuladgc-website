@@ -47,11 +47,13 @@ export default function Blog() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.12_0.04_55)/0.82] to-[oklch(0.12_0.04_55)/0.65]" />
         <div className="relative z-10 container">
-          <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Peninsula Disc Golf Club</p>
-          <h1 className="font-display text-5xl font-semibold text-white mb-3">News & Blog</h1>
-          <p className="font-body text-white/70 max-w-xl text-lg">
-            Course updates, tournament recaps, community stories, and tips to improve your game.
-          </p>
+          <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8 max-w-2xl">
+            <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Peninsula Disc Golf Club</p>
+            <h1 className="font-display text-5xl font-semibold text-white mb-3">News & Blog</h1>
+            <p className="font-body text-white/70 max-w-xl text-lg">
+              Course updates, tournament recaps, community stories, and tips to improve your game.
+            </p>
+          </div>
         </div>
       </section>
 

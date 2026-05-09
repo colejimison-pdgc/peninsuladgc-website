@@ -37,7 +37,7 @@ export default function EventDetail() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative pt-24 pb-0 overflow-hidden">
+      <section className="relative pt-0 pb-0 overflow-hidden">
         {event.image ? (
           <div className="relative h-72 md:h-96">
             <img
@@ -47,18 +47,20 @@ export default function EventDetail() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.85] via-[oklch(0.12_0.04_55)/0.4] to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 container pb-8">
-              <Link href="/events" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to Events
-              </Link>
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`event-tag ${categoryColors[event.category]}`}>
-                  {categoryLabels[event.category]}
-                </span>
-                {event.featured && (
-                  <span className="event-tag bg-[oklch(0.48_0.09_152)] text-white">Featured Event</span>
-                )}
+              <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8">
+                <Link href="/events" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
+                  <ArrowLeft className="w-4 h-4" /> Back to Events
+                </Link>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`event-tag ${categoryColors[event.category]}`}>
+                    {categoryLabels[event.category]}
+                  </span>
+                  {event.featured && (
+                    <span className="event-tag bg-[oklch(0.48_0.09_152)] text-white">Featured Event</span>
+                  )}
+                </div>
+                <h1 className="font-display text-4xl md:text-5xl font-semibold text-white">{event.title}</h1>
               </div>
-              <h1 className="font-display text-4xl md:text-5xl font-semibold text-white">{event.title}</h1>
             </div>
           </div>
         ) : (

@@ -6,7 +6,9 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Disc } from "lucide-react";
+import { Menu, X } from "lucide-react";
+
+const LOGO_IMAGE = "/manus-storage/pdgc-logo-clean_5db369b8.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -43,17 +45,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-full bg-[oklch(0.65_0.16_48)] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-            <Disc className="w-5 h-5 text-white" strokeWidth={2} />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display font-semibold text-white text-sm leading-none">
-              Peninsula
-            </div>
-            <div className="font-mono-brand text-[oklch(0.65_0.16_48)] text-[10px] tracking-widest uppercase leading-none mt-0.5">
-              Disc Golf Club
-            </div>
-          </div>
+          <img src={LOGO_IMAGE} alt="Peninsula Disc Golf Club" className="h-12 w-auto group-hover:scale-105 transition-transform" />
         </Link>
 
         {/* Desktop Nav */}
