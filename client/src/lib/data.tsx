@@ -3,6 +3,8 @@
 // Design: Outdoor Adventure Editorial
 // ============================================================
 
+import { ReactNode } from "react";
+
 export interface Event {
   id: string;
   title: string;
@@ -11,7 +13,7 @@ export interface Event {
   location: string;
   category: "tournament" | "league" | "clinic" | "doubles" | "volunteer";
   description: string;
-  longDescription: string;
+  longDescription: ReactNode;
   registrationUrl?: string;
   registrationLabel?: string;
   directionsUrl?: string;
@@ -54,7 +56,29 @@ export const events: Event[] = [
     location: "Emerald Hills Disc Golf Course, Redwood City",
     category: "league",
     description: "Flex start league every Tuesday and Thursday. All skill levels welcome. Play solo or in groups.",
-    longDescription: `Every Tuesday and Thursday there is a flex start league at the Emerald Hills Disc Golf Course in Redwood City. It's the perfect way to meet fellow disc golfers, improve your game, and enjoy a beautiful and well-maintained course.\n\nFormat: Flex start, meaning play anytime during the day. You are able to play in this league solo and be eligible for the league payouts. You must play in a group of 3 or more to be eligible for the ace pot.\n\nCost:\nBag Tag: $25/year (used for reduced green fees)\nLeague Fee: $5 per round\nAce Pot: $1 per round (optional)`,
+    longDescription: (
+      <>
+        <p><b>League Info</b></p>
+        <p>The Peninsula Disc Golf Club Weekly is taking the Bay Area by storm! A UDisc Handicap league, this flex start league invites players of all skills levels to compete for both bag tags and cash prizes.</p>
+        <p><b>Finding a Group</b></p>
+        <p>Email <a className="underline" href="mailto:peninsuladiscgolf@gmail.com">peninsuladiscgolf@gmail.com</a> to find a group or get more information.</p>
+        <p><b>Finances</b></p>
+        <p>Bag tag: $25/year (also gets you discounted greens fees)</p>
+        <p>League fee: $5 per round</p>
+        <p>Ace pot: $1 per round (optional)</p>
+        <p>Greens fees: $10 per round (with bag tag), $18 otherwise</p>
+        <p>Please send league payments to <a className="underline" href="https://venmo.com/code?user_id=1771204499210240334&created=1752794879">@Michael-Regula</a> on Venmo.</p>
+        <p>You are required to pay the league fee for the first round that you play in the league, which will establish your handicap. You will not be eligible for the payouts in your first round. You will be eligible for payouts in all subsequent rounds.</p>
+        <p>Payments must be made before you start your round to be eligible for payouts and the ace pot.</p>
+        <p><b>Bag Tags</b></p>
+        <p>Work your way all the way up to #1 tag by the end of the year! Bag tags should be swapped within groups based on the raw (non-handicap) score.</p>
+        <p><b>Payouts</b></p>
+        <p>Top 40% payout (PDGA flat curve)</p>
+        <p>Payouts are calculated based on the UDisc handicap scores.</p>
+        <p><b>Group Requirements</b></p>
+        <p>You are able to play in this league solo and be eligible for the league payouts. You must play in a group of 3 or more to be eligible for the ace pot.</p>
+      </>
+    ),
     entryFee: "$5 league + $10 green fees (with bag tag)",
     registrationUrl: "https://udisc.com/events?courseId=9gK8YyTJsy3wBMwNX&quickFilter=league",
     registrationLabel: "Udisc Event",
@@ -72,7 +96,29 @@ export const events: Event[] = [
     location: "Villa Maria Disc Golf Course, Cupertino",
     category: "doubles",
     description: "Weekly Doubles league every Monday. All skill levels welcome. Play in pairs and compete for weekly prizes.",
-    longDescription: `The Monday Doubles league is a great opportunity to meet up with a great community of disc golfers in a more casual format. Fun is guaranteed.\n\nDivisions:\n\nCompetitive Division: Join to get paired with a partner to compete for the full payout of the $5 entry fee from each competitor.\n\nRecreation Division: Play for free with a partner that you bring or get paired with another person in the division.\n\nFees:\nCompetitive Division: $5 per round\nRecreation Division: Free\nDaily parking pass: $6 per car\nAce pot: $1 per round (optional)`,
+    longDescription: (
+      <>
+        <p><b>League Info</b></p>
+        <p>People are saying it's the best dubs in the Peninsula!</p>
+        <p>All skills levels are welcome to enjoy the good vibes and the beautiful disc golf at Villa Maria Disc Golf Course at Stevens Creek County Park.</p>
+        <hr />
+        <p><i>We offer a COMPETITIVE division and a RECREATIONAL division.</i></p>
+        <p><b>COMPETITIVE</b></p>
+        <p>Players will have partners drawn randomly.</p>
+        <p>Top 20% payout based on modified Steep-Pro PDGA payout calculator (b = -2).</p>
+        <p><b>RECREATIONAL</b></p>
+        <p>RECREATIONAL players are welcome to bring their own partners (BYOP) or get randomly drawn a partner also playing Recreational.</p>
+        <p>COMPETITIVE and RECREATIONAL teams will still be mixed on cards.</p>
+        <p>COMPETITIVE teams and starting tee assignments for both divisions are drawn promptly at 5:00pm at the practice baskets.</p>
+        <hr />
+        <p><b>Fees</b></p>
+        <p>$6 parking fee (<a className="underline" href="https://gooutsideandplay.org/reservations/pass_sales.asp?actiontype=park_passes">Annual Passes available</a>)</p>
+        <p>$5 buy in (COMPETITIVE players)</p>
+        <p>$1 for the ace pot (optional for all players)</p>
+        <p>Cash is accepted. <b>Venmo, Zelle, or Paypal</b> are preferred for payment tracking purposes.</p>
+      </>
+    ),
+    // longDescription: `The Monday Doubles league is a great opportunity to meet up with a great community of disc golfers in a more casual format. Fun is guaranteed.\n\nDivisions:\n\nCompetitive Division: Join to get paired with a partner to compete for the full payout of the $5 entry fee from each competitor.\n\nRecreation Division: Play for free with a partner that you bring or get paired with another person in the division.\n\nFees:\nCompetitive Division: $5 per round\nRecreation Division: Free\nDaily parking pass: $6 per car\nAce pot: $1 per round (optional)`,
     entryFee: "$5 (Competitive) or Free (Recreation) + $6 parking",
     divisions: ["Competitive", "Recreation"],
     registrationUrl: "https://udisc.com/events?courseId=Ju4Aqz5FFNoinH4ZA&quickFilter=league",

@@ -16,7 +16,7 @@ const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/31051966352168072
 
 const stats = [
   { icon: Users, value: "1,000+", label: "Active Members" },
-  { icon: TreePine, value: "2", label: "Disc Golf Courses" },
+  { icon: TreePine, value: "2", label: "Courses" },
 ];
 
 export default function Home() {

@@ -1,3 +1,68 @@
 [2026-05-09T01:08:18.725Z] {"timestamp":1778288896722,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-05-09T01:08:18.725Z] {"timestamp":1778288896818,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-05-09T01:08:18.725Z] {"timestamp":1778288897293,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-09T16:32:53.180Z] {"timestamp":1778344371175,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-09T16:32:53.180Z] {"timestamp":1778344371275,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-09T16:32:53.180Z] {"timestamp":1778344371722,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-09T16:36:29.696Z] {"timestamp":1778344587643,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-09T16:36:29.696Z] {"timestamp":1778344587693,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-09T16:36:29.696Z] {"timestamp":1778344588155,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-09T16:38:03.648Z] {"timestamp":1778344683230,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:38:03.648Z] {"timestamp":1778344683231,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Events.tsx"],"stack":null}
+[2026-05-09T16:38:03.648Z] {"timestamp":1778344683231,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Blog.tsx"],"stack":null}
+[2026-05-09T16:38:03.648Z] {"timestamp":1778344683231,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:38:03.648Z] {"timestamp":1778344683231,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/BlogPost.tsx"],"stack":null}
+[2026-05-09T16:38:53.646Z] {"timestamp":1778344733024,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:38:53.646Z] {"timestamp":1778344733024,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Events.tsx"],"stack":null}
+[2026-05-09T16:38:53.646Z] {"timestamp":1778344733024,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Blog.tsx"],"stack":null}
+[2026-05-09T16:38:53.646Z] {"timestamp":1778344733024,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:38:53.646Z] {"timestamp":1778344733024,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/BlogPost.tsx"],"stack":null}
+[2026-05-09T16:39:31.645Z] {"timestamp":1778344770659,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/Blog.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.error (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 2)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-05-09T16:39:31.645Z] {"timestamp":1778344770660,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/EventDetail.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.error (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 3)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770661,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/Events.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.error (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 1)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770661,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/BlogPost.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.error (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 4)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770737,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770737,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Events.tsx"],"stack":null}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770737,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Blog.tsx"],"stack":null}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770737,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:39:31.646Z] {"timestamp":1778344770737,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/BlogPost.tsx"],"stack":null}
+[2026-05-09T16:40:01.645Z] {"timestamp":1778344801053,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:40:01.645Z] {"timestamp":1778344801053,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:40:21.646Z] {"timestamp":1778344819837,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:40:21.646Z] {"timestamp":1778344819837,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:40:29.645Z] {"timestamp":1778344829031,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:40:29.645Z] {"timestamp":1778344829031,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:40:55.647Z] {"timestamp":1778344854360,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:40:55.647Z] {"timestamp":1778344854360,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:41:49.645Z] {"timestamp":1778344907778,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:41:49.645Z] {"timestamp":1778344907778,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:41:57.646Z] {"timestamp":1778344916710,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:41:57.646Z] {"timestamp":1778344916710,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:42:11.645Z] {"timestamp":1778344930355,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:42:11.645Z] {"timestamp":1778344930355,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:42:15.645Z] {"timestamp":1778344934955,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:42:15.645Z] {"timestamp":1778344934955,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:42:15.645Z] {"timestamp":1778344935044,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:42:15.645Z] {"timestamp":1778344935044,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:42:37.646Z] {"timestamp":1778344955780,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:42:37.646Z] {"timestamp":1778344955780,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:43:04.359Z] {"timestamp":1778344983257,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:43:04.359Z] {"timestamp":1778344983257,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:45:11.262Z] {"timestamp":1778345110357,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:45:11.263Z] {"timestamp":1778345110357,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:45:33.646Z] {"timestamp":1778345133534,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:45:33.646Z] {"timestamp":1778345133534,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:45:45.646Z] {"timestamp":1778345143684,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:45:45.647Z] {"timestamp":1778345143684,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:46:26.356Z] {"timestamp":1778345185970,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:46:26.357Z] {"timestamp":1778345185970,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:46:43.646Z] {"timestamp":1778345203326,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:46:43.646Z] {"timestamp":1778345203326,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:47:03.645Z] {"timestamp":1778345223185,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:47:03.645Z] {"timestamp":1778345223185,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:47:35.648Z] {"timestamp":1778345254028,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:47:35.648Z] {"timestamp":1778345254028,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:48:35.644Z] {"timestamp":1778345314293,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventDetail.tsx"],"stack":null}
+[2026-05-09T16:48:35.644Z] {"timestamp":1778345314293,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-09T16:49:11.645Z] {"timestamp":1778345351020,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-05-09T16:49:11.645Z] {"timestamp":1778345351020,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
