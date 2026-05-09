@@ -1,0 +1,262 @@
+/* ============================================================
+   DESIGN SYSTEM: Outdoor Adventure Editorial
+   Palette: Moss Green (#4a7c59) + Sunset Orange (#e07b39)
+   Fonts: Fraunces (display) · Lato (body) · IBM Plex Mono (labels)
+   Mood: Warm, community-focused, editorial, tactile
+   ============================================================ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom brand tokens */
+  --color-moss: oklch(0.48 0.09 152);
+  --color-moss-dark: oklch(0.36 0.09 152);
+  --color-moss-light: oklch(0.72 0.07 152);
+  --color-sunset: oklch(0.65 0.16 48);
+  --color-sunset-dark: oklch(0.52 0.16 48);
+  --color-cream: oklch(0.97 0.015 85);
+  --color-espresso: oklch(0.22 0.04 55);
+  --color-parchment: oklch(0.94 0.02 85);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.97 0.015 85);
+  --foreground: oklch(0.22 0.04 55);
+  --card: oklch(1 0.008 85);
+  --card-foreground: oklch(0.22 0.04 55);
+  --popover: oklch(1 0.008 85);
+  --popover-foreground: oklch(0.22 0.04 55);
+  --primary: oklch(0.48 0.09 152);
+  --primary-foreground: oklch(0.97 0.015 85);
+  --secondary: oklch(0.90 0.025 85);
+  --secondary-foreground: oklch(0.35 0.06 55);
+  --muted: oklch(0.92 0.018 85);
+  --muted-foreground: oklch(0.52 0.04 55);
+  --accent: oklch(0.65 0.16 48);
+  --accent-foreground: oklch(0.97 0.015 85);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.86 0.025 85);
+  --input: oklch(0.86 0.025 85);
+  --ring: oklch(0.48 0.09 152);
+  --chart-1: oklch(0.48 0.09 152);
+  --chart-2: oklch(0.65 0.16 48);
+  --chart-3: oklch(0.72 0.07 152);
+  --chart-4: oklch(0.36 0.09 152);
+  --chart-5: oklch(0.52 0.16 48);
+  --sidebar: oklch(0.22 0.04 55);
+  --sidebar-foreground: oklch(0.97 0.015 85);
+  --sidebar-primary: oklch(0.65 0.16 48);
+  --sidebar-primary-foreground: oklch(0.97 0.015 85);
+  --sidebar-accent: oklch(0.36 0.09 152);
+  --sidebar-accent-foreground: oklch(0.97 0.015 85);
+  --sidebar-border: oklch(0.32 0.05 55);
+  --sidebar-ring: oklch(0.65 0.16 48);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Brand typography helpers */
+  .font-display {
+    font-family: 'Fraunces', serif;
+  }
+  .font-body {
+    font-family: 'Lato', sans-serif;
+  }
+  .font-mono-brand {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Ink-stroke underline for section headings */
+  .heading-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .heading-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: oklch(0.65 0.16 48);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .heading-underline.visible::after,
+  .heading-underline:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Topographic texture overlay */
+  .topo-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath d='M0 200 Q100 150 200 200 Q300 250 400 200' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M0 180 Q100 130 200 180 Q300 230 400 180' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0 220 Q100 170 200 220 Q300 270 400 220' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0 160 Q100 110 200 160 Q300 210 400 160' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.04'/%3E%3Cpath d='M0 240 Q100 190 200 240 Q300 290 400 240' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.04'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 400px 400px;
+  }
+
+  /* Grain overlay for texture */
+  .grain-overlay {
+    position: relative;
+  }
+  .grain-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+  }
+
+  /* Fade-up animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .animate-fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; }
+  .animate-fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+  .animate-fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards; }
+  .animate-fade-up-delay-4 { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; }
+
+  /* Scroll reveal */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* Disc arc decorative element */
+  .disc-arc {
+    position: relative;
+  }
+  .disc-arc::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+    border-top: 3px solid oklch(0.65 0.16 48);
+    border-radius: 50% 50% 0 0;
+    opacity: 0.6;
+  }
+
+  /* Tag / badge style */
+  .event-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+}
