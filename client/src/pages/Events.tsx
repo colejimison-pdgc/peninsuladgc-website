@@ -12,7 +12,7 @@ import type { Event } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const COURSE_IMAGE = "/images/eh_ctp_hole9_5ce4862a.jpg";
+const COURSE_IMAGE = "/images/eh_ctp_hole9.jpg";
 
 const categories: Array<{ value: string; label: string }> = [
   { value: "all", label: "All Events" },

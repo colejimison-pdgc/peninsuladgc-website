@@ -6,7 +6,7 @@
 import { Link } from "wouter";
 import { Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
-const LOGO_IMAGE = "/images/pdgc-logo-clean_5db369b8.png";
+const LOGO_IMAGE = "/images/pdgc-logo-clean_elkhead.png";
 
 export default function Footer() {
   return (
