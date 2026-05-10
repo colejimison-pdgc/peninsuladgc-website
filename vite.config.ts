@@ -69,8 +69,6 @@ function writeToLogFile(source: LogSource, entries: unknown[]) {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Vite plugin for storage proxy
  * Forwards /manus-storage/{key} requests to Forge for signed URLs
  */
@@ -121,7 +119,6 @@ function vitePluginStorageProxy(): Plugin {
 }
 
 /**
->>>>>>> 3ad4b1e3bd1164c09980d8961102d1d7078c5f3b
  * Vite plugin to collect browser debug logs
  * - POST /__manus__/logs: Browser sends logs, written directly to files
  * - Files: browserConsole.log, networkRequests.log, sessionReplay.log

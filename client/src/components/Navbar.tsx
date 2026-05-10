@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 
-const LOGO_IMAGE = "/manus-storage/pdgc-logo-clean_5db369b8.png";
+const LOGO_IMAGE = "/images/pdgc-logo-clean_5db369b8.png";
 
 const navLinks = [
   { href: "/", label: "Home" },

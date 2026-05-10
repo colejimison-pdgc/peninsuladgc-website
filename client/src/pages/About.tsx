@@ -9,7 +9,7 @@ import { Heart, TreePine, Users, TrendingUp, ArrowRight, Mail } from "lucide-rea
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const ABOUT_IMAGE = "/manus-storage/eh_devin_hole4_6c0dead2.jpg";
+const ABOUT_IMAGE = "/images/eh_devin_hole4_6c0dead2.jpg";
 const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/community-event-D6xB3opW72GX3UimDuQH5d.webp";
 
 const values = [

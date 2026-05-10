@@ -10,13 +10,13 @@ import { categoryColors, categoryLabels } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const HERO_IMAGE = "/manus-storage/harrison_hole2_639c76ec.jpg";
+const HERO_IMAGE = "/images/harrison_hole2_639c76ec.jpg";
 const ACTION_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/action-throw-8i7pxpEA3rThZDTMFnR7Xm.webp";
 const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/community-event-D6xB3opW72GX3UimDuQH5d.webp";
 
 const stats = [
   { icon: Users, value: "1,000+", label: "Active Members" },
-  { icon: TreePine, value: "2", label: "Courses" },
+  { icon: TreePine, value: "2", label: "Disc Golf Courses" },
 ];
 
 export default function Home() {

@@ -87,11 +87,9 @@ export default function EventDetail() {
               <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
                 <h2 className="font-display text-2xl font-semibold text-[oklch(0.22_0.04_55)] mb-5">About This Event</h2>
                 <div className="font-body text-[oklch(0.35_0.04_55)] leading-relaxed space-y-4">
-                  {typeof event.longDescription === "string"
-                    ? event.longDescription.split("\n\n").map((para, i) => (
-                        <p key={i}>{para}</p>
-                      ))
-                    : event.longDescription}
+                  {event.longDescription.split("\n\n").map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
                 </div>
               </div>
 
@@ -164,7 +162,7 @@ export default function EventDetail() {
                     <div>
                       <p className="font-mono-brand text-[10px] tracking-widest uppercase text-white/40 mb-0.5">Location</p>
                       <div className="flex items-center justify-between">
-                        <p className="font-body text-sm text-white/90 mr-1">{event.location}</p>
+                        <p className="font-body text-sm text-white/90">{event.location}</p>
                         {event.directionsUrl && (
                           <a
                             href={event.directionsUrl}
