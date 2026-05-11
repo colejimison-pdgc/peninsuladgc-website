@@ -16,7 +16,7 @@ const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/31051966352168072
 
 const stats = [
   { icon: Users, value: "1,000+", label: "Active Members" },
-  { icon: TreePine, value: "2", label: "Disc Golf Courses" },
+  { icon: TreePine, value: "2", label: "Courses" },
 ];
 
 export default function Home() {
@@ -31,13 +31,15 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.92] via-[oklch(0.12_0.04_55)/0.45] to-transparent" />
+        <div className="absolute inset-0 bg-[oklch(0_0_0/0.50)] backdrop-blur-xs md:hidden" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.92] via-[oklch(0.12_0.04_55)/0.45] to-transparent" />
 
         <div className="relative z-10 container pb-20 pt-32">
-          <div className="max-w-3xl bg-black/40 backdrop-blur-sm rounded-lg p-8">
+          <div className="max-w-3xl md:bg-black/40 md:backdrop-blur-sm rounded-lg p-8">
 
             <h1 className="font-display text-5xl md:text-7xl font-semibold leading-tight mb-6 animate-fade-up">
-              <span className="text-white">Peninsula</span>{" "}
+              <span className="text-white">Peninsula</span>
+              {" "}
               <span className="italic text-[oklch(0.82_0.14_48)]">Disc Golf Club</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-white/80 max-w-xl mb-8 animate-fade-up animate-fade-up-delay-1">

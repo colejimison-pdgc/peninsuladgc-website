@@ -51,12 +51,13 @@ export default function Events() {
         style={{
           backgroundImage: `url(${COURSE_IMAGE})`,
           backgroundSize: "cover",
-          backgroundPosition: "center 30%",
+          backgroundPosition: "bottom 30% center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.12_0.04_55)/0.85] to-[oklch(0.12_0.04_55)/0.70]" />
+        <div className="absolute inset-0 bg-[oklch(0_0_0/0.50)] backdrop-blur-xs md:hidden" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-[oklch(0.12_0.04_55)/0.85] to-[oklch(0.12_0.04_55)/0.70]" />
         <div className="relative z-10 container">
-          <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8 max-w-2xl">
+          <div className="md:bg-[oklch(0_0_0/0.40)] md:backdrop-blur-sm rounded-lg p-8 max-w-2xl">
             <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Peninsula Disc Golf Club</p>
             <h1 className="font-display text-5xl font-semibold text-white mb-3">Events Calendar</h1>
             <p className="font-body text-white/70 max-w-xl text-lg">

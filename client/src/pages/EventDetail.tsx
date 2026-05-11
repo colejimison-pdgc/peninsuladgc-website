@@ -45,9 +45,10 @@ export default function EventDetail() {
               alt={event.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.85] via-[oklch(0.12_0.04_55)/0.4] to-transparent" />
+            <div className="absolute inset-0 bg-[oklch(0_0_0/0.50)] backdrop-blur-xs md:hidden" />
+            <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.85] via-[oklch(0.12_0.04_55)/0.4] to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 container pb-8">
-              <div className="bg-[oklch(0_0_0/0.40)] backdrop-blur-sm rounded-lg p-8">
+              <div className="md:bg-[oklch(0_0_0/0.40)] md:backdrop-blur-sm rounded-lg p-8 max-w-3xl">
                 <Link href="/events" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
                   <ArrowLeft className="w-4 h-4" /> Back to Events
                 </Link>
