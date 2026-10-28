@@ -9,7 +9,7 @@ export interface Event {
   id: string;
   title: string;
   date: string;
-  time: string;
+  time?: string;
   location: string;
   category: "tournament" | "league" | "clinic" | "doubles" | "volunteer";
   description: string;
@@ -23,7 +23,8 @@ export interface Event {
   entryFee?: string;
   divisions?: string[];
   image?: string;
-  featured?: boolean;
+  hibernating?: boolean;
+  past?: boolean;
 }
 
 export interface BoardMember {
@@ -50,7 +51,7 @@ export interface BlogPost {
 export const events: Event[] = [
   {
     id: "spring-league",
-    title: "Tuesday / Thursday Spring Season",
+    title: "Emerald Hills Weekly League",
     date: "2026-03-10",
     time: "Flex start",
     location: "Emerald Hills Disc Golf Course, Redwood City",
@@ -83,9 +84,8 @@ export const events: Event[] = [
     registrationUrl: "https://udisc.com/events?courseId=9gK8YyTJsy3wBMwNX&quickFilter=league",
     registrationLabel: "Udisc Event",
     directionsUrl: "https://maps.app.goo.gl/jCxhowx5SmVsJvvE6",
-    customDateDisplay: "Tuesdays and Thursdays from March 10 to June 11, 2026",
+    customDateDisplay: "Tuesdays and Thursdays Year Round",
     image: "/manus-storage/eh_conrad_hole16_154a8af3.jpg",
-    featured: true,
   },
 
   {
@@ -124,9 +124,22 @@ export const events: Event[] = [
     registrationUrl: "https://udisc.com/events?courseId=Ju4Aqz5FFNoinH4ZA&quickFilter=league",
     registrationLabel: "Udisc Event",
     directionsUrl: "https://maps.app.goo.gl/a3NoNVeX1eCMUioi7",
-    customDateDisplay: "Mondays from March 23 to September 14, 2026",
+    customDateDisplay: "Mondays from April to September",
     image: "/manus-storage/vm_doubles_7009cbd4.webp",
-    featured: true,
+    hibernating: true,
+  },
+  {
+    id: "2026-climate-best-open",
+    title: "2026 Climate Best Open",
+    date: "2026-08-22",
+    location: "Emerald Hills Disc Golf Course, Redwood City",
+    category: "tournament",
+    description: "The return of sanctioned tournaments to Emerald Hills, the 2026 Climate Best Open was a one-day, two-round tournament on a fun temp layout.",
+    longDescription: "The return of sanctioned tournaments to Emerald Hills, the 2026 Climate Best Open was a one-day, two-round tournament on a fun temp layout.",
+    entryFee: "$150/$90/$30 for Pros/Ams/Juniors",
+    registrationUrl: "https://www.pdga.com/tour/event/105687",
+    registrationLabel: "PDGA Event",
+    past: true,
   },
 ];
 
@@ -342,16 +355,16 @@ The Spring League starts on Tuesday March 10th. The league standings are reset. 
 ];
 
 export const categoryColors: Record<string, string> = {
-  tournament: "bg-amber-100 text-amber-800",
-  league: "bg-green-100 text-green-800",
-  clinic: "bg-blue-100 text-blue-800",
-  doubles: "bg-indigo-100 text-indigo-800",
-  volunteer: "bg-orange-100 text-orange-800",
-  news: "bg-red-100 text-red-800",
-  "tournament-recap": "bg-amber-100 text-amber-800",
-  "course-update": "bg-green-100 text-green-800",
-  community: "bg-blue-100 text-blue-800",
-  tips: "bg-teal-100 text-teal-800",
+  tournament: "bg-brand-red/10 text-brand-red",
+  league: "bg-sage-soft text-evergreen",
+  clinic: "bg-parchment text-ink",
+  doubles: "bg-evergreen/10 text-evergreen",
+  volunteer: "bg-olive/15 text-evergreen-deep",
+  news: "bg-brand-red text-white",
+  "tournament-recap": "bg-brand-red/10 text-brand-red",
+  "course-update": "bg-sage-soft text-evergreen",
+  community: "bg-parchment text-ink",
+  tips: "bg-evergreen/10 text-evergreen",
 };
 
 export const categoryLabels: Record<string, string> = {

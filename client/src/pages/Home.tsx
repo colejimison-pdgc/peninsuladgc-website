@@ -22,7 +22,7 @@ const stats = [
 export default function Home() {
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.97_0.015_85)]">
+    <div className="min-h-screen flex flex-col bg-cream-soft">
       <Navbar />
 
       {/* ── HERO ── */}
@@ -32,15 +32,16 @@ export default function Home() {
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
         <div className="absolute inset-0 bg-[oklch(0_0_0/0.50)] backdrop-blur-xs md:hidden" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.92] via-[oklch(0.12_0.04_55)/0.45] to-transparent" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-evergreen-deep/92 via-evergreen-deep/45 to-transparent" />
 
         <div className="relative z-10 container pb-20 pt-32">
           <div className="max-w-3xl md:bg-black/40 md:backdrop-blur-sm rounded-lg p-8">
 
             <h1 className="font-display text-5xl md:text-7xl font-semibold leading-tight mb-6 animate-fade-up">
-              <span className="text-white">Peninsula</span>
-              {" "}
-              <span className="italic text-[oklch(0.82_0.14_48)]">Disc Golf Club</span>
+              <span className="block text-white">Peninsula</span>
+              <span className="block mt-2 font-body text-xl md:text-2xl font-bold uppercase tracking-[0.18em] text-cream">
+                Disc Golf Club
+              </span>
             </h1>
             <p className="font-body text-lg md:text-xl text-white/80 max-w-xl mb-8 animate-fade-up animate-fade-up-delay-1">
               A community-driven non-profit bringing players of all skill levels together through tournaments, leagues, clinics, and course stewardship.
@@ -48,7 +49,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 animate-fade-up animate-fade-up-delay-2">
               <Link
                 href="/events"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[oklch(0.65_0.16_48)] hover:bg-[oklch(0.52_0.16_48)] text-white font-body font-bold rounded transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-red hover:bg-brand-red-dark text-white font-body font-bold rounded transition-colors text-sm"
               >
                 View Events <ArrowRight className="w-4 h-4" />
               </Link>
@@ -69,12 +70,12 @@ export default function Home() {
       </section>
 
       {/* ── STATS STRIP ── */}
-      <section className="bg-[oklch(0.22_0.04_55)] py-10">
+      <section className="bg-evergreen py-10">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
             {stats.map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center text-center gap-2">
-                <Icon className="w-6 h-6 text-[oklch(0.65_0.16_48)]" />
+                <Icon className="w-6 h-6 text-sage" />
                 <span className="font-display text-3xl font-semibold text-white">{value}</span>
                 <span className="font-mono-brand text-[10px] tracking-widest uppercase text-white/50">{label}</span>
               </div>

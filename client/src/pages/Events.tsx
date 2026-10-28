@@ -5,7 +5,6 @@
 // ============================================================
 
 import { useState } from "react";
-import { Link } from "wouter";
 import { Calendar, MapPin, Clock, Users, DollarSign, ChevronRight, Filter } from "lucide-react";
 import { events, categoryColors, categoryLabels, formatDate, formatShortDate } from "@/lib/data";
 import type { Event } from "@/lib/data";
@@ -23,6 +22,11 @@ const categories: Array<{ value: string; label: string }> = [
   { value: "volunteer", label: "Volunteer" },
 ];
 
+const eventCategories = new Set(events.map((event) => event.category));
+const availableCategories = categories.filter(
+  (category) => category.value === "all" || eventCategories.has(category.value as Event["category"]),
+);
+
 export default function Events() {
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -30,19 +34,14 @@ export default function Events() {
     ? events
     : events.filter((e) => e.category === activeCategory);
 
-  // Group by month
-  const grouped: Record<string, Event[]> = {};
-  filtered.forEach((event) => {
-    const month = new Date(event.date + "T12:00:00").toLocaleDateString("en-US", {
-      month: "long",
-      year: "numeric",
-    });
-    if (!grouped[month]) grouped[month] = [];
-    grouped[month].push(event);
-  });
+  const sections = [
+    { title: "Active Events", events: filtered.filter((event) => !event.hibernating && !event.past), fullWidth: false },
+    { title: "Hibernating Events", events: filtered.filter((event) => event.hibernating), fullWidth: false },
+    { title: "Past Events", events: filtered.filter((event) => event.past), fullWidth: true },
+  ].filter((section) => section.events.length > 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.97_0.015_85)]">
+    <div className="min-h-screen flex flex-col bg-cream-soft">
       <Navbar />
 
       {/* ── PAGE HEADER ── */}
@@ -55,11 +54,11 @@ export default function Events() {
         }}
       >
         <div className="absolute inset-0 bg-[oklch(0_0_0/0.50)] backdrop-blur-xs md:hidden" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-[oklch(0.12_0.04_55)/0.85] to-[oklch(0.12_0.04_55)/0.70]" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-evergreen-deep/85 to-evergreen-deep/70" />
         <div className="relative z-10 container">
           <div className="md:bg-[oklch(0_0_0/0.40)] md:backdrop-blur-sm rounded-lg p-8 max-w-2xl">
-            <p className="font-mono-brand text-[11px] tracking-widest uppercase text-[oklch(0.65_0.16_48)] mb-2">Peninsula Disc Golf Club</p>
-            <h1 className="font-display text-5xl font-semibold text-white mb-3">Events Calendar</h1>
+            <p className="font-mono-brand text-[11px] tracking-widest uppercase text-cream mb-2">Peninsula Disc Golf Club</p>
+            <h1 className="font-display text-5xl font-semibold text-white mb-3">Events</h1>
             <p className="font-body text-white/70 max-w-xl text-lg">
               Tournaments, weekly leagues, beginner clinics, and community events — there's always something happening on the Peninsula.
             </p>
@@ -68,18 +67,18 @@ export default function Events() {
       </section>
 
       {/* ── FILTER BAR ── */}
-      <div className="sticky top-16 md:top-20 z-40 bg-white border-b border-[oklch(0.86_0.025_85)] shadow-sm">
+      <div className="sticky top-16 md:top-20 z-40 bg-white border-b border-brand-border shadow-sm">
         <div className="container">
           <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-none">
-            <Filter className="w-4 h-4 text-[oklch(0.52_0.04_55)] flex-shrink-0 mr-1" />
-            {categories.map((cat) => (
+            <Filter className="w-4 h-4 text-muted-ink flex-shrink-0 mr-1" />
+            {availableCategories.map((cat) => (
               <button
                 key={cat.value}
                 onClick={() => setActiveCategory(cat.value)}
                 className={`flex-shrink-0 px-4 py-1.5 rounded-full font-body text-sm font-bold transition-colors ${
                   activeCategory === cat.value
-                    ? "bg-[oklch(0.48_0.09_152)] text-white"
-                    : "bg-[oklch(0.92_0.018_85)] text-[oklch(0.52_0.04_55)] hover:bg-[oklch(0.86_0.025_85)]"
+                    ? "bg-evergreen text-white"
+                    : "bg-sage-soft text-muted-ink hover:bg-brand-border"
                 }`}
               >
                 {cat.label}
@@ -92,33 +91,40 @@ export default function Events() {
       {/* ── EVENTS LIST ── */}
       <main className="flex-1 py-14">
         <div className="container">
-          {Object.keys(grouped).length === 0 ? (
+          {sections.length === 0 ? (
             <div className="text-center py-20">
-              <p className="font-display text-2xl text-[oklch(0.22_0.04_55)] mb-3">No events scheduled</p>
-              <p className="font-body text-[oklch(0.52_0.04_55)] mb-6">There are currently no {activeCategory === "all" ? "" : categoryLabels[activeCategory as keyof typeof categoryLabels]?.toLowerCase()} events scheduled, but there will be events coming soon!</p>
+              <p className="font-display text-2xl text-evergreen mb-3">No events scheduled</p>
+              <p className="font-body text-muted-ink mb-6">There are currently no {activeCategory === "all" ? "" : categoryLabels[activeCategory as keyof typeof categoryLabels]?.toLowerCase()} events scheduled, but there will be events coming soon!</p>
               {activeCategory !== "all" && (
                 <button
                   onClick={() => setActiveCategory("all")}
-                  className="font-body text-sm text-[oklch(0.48_0.09_152)] hover:underline"
+                  className="font-body text-sm text-evergreen hover:underline"
                 >
                   View all events
                 </button>
               )}
             </div>
           ) : (
-            Object.entries(grouped).map(([month, monthEvents]) => (
-              <div key={month} className="mb-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <h2 className="font-display text-2xl font-semibold text-[oklch(0.22_0.04_55)]">Active Events</h2>
-                  <div className="flex-1 h-px bg-[oklch(0.86_0.025_85)]" />
-                </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              {sections.map((section) => (
+                <section key={section.title} className={section.fullWidth ? "lg:col-span-2" : undefined}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <h2 className="font-display text-2xl font-semibold text-evergreen">{section.title}</h2>
+                    <div className="flex-1 h-px bg-brand-border" />
+                  </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                  {monthEvents.map((event) => (
-                    <Link key={event.id} href={`/events/${event.id}`}>
+                  <div className={`grid grid-cols-1 gap-5 ${section.fullWidth ? "lg:grid-cols-2" : ""}`}>
+                    {section.events.map((event) => (
+                    <a
+                      key={event.id}
+                      href={event.registrationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${event.title} event details`}
+                    >
                       <article className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer flex flex-col sm:flex-row">
                         {/* Date block */}
-                        <div className="sm:w-28 bg-[oklch(0.22_0.04_55)] flex flex-row sm:flex-col items-center justify-center gap-2 sm:gap-1 p-4 flex-shrink-0">
+                        <div className="sm:w-28 bg-evergreen flex flex-row sm:flex-col items-center justify-center gap-2 sm:gap-1 p-4 flex-shrink-0">
                           {event.customDateDisplay ? (
                             <div className="flex flex-col sm:flex-col items-center justify-center gap-1 text-center">
                               <span className="font-body text-white text-xs leading-tight">
@@ -127,7 +133,7 @@ export default function Events() {
                             </div>
                           ) : (
                             <>
-                              <span className="font-mono-brand text-[oklch(0.65_0.16_48)] text-xs tracking-widest uppercase">
+                              <span className="font-mono-brand text-sage text-xs tracking-widest uppercase">
                                 {new Date(event.date + "T12:00:00").toLocaleDateString("en-US", { month: "short" })}
                               </span>
                               <span className="font-display text-white text-3xl font-semibold leading-none">
@@ -146,25 +152,24 @@ export default function Events() {
                             <span className={`event-tag ${categoryColors[event.category]}`}>
                               {categoryLabels[event.category]}
                             </span>
-                            {event.featured && (
-                              <span className="event-tag bg-[oklch(0.48_0.09_152)] text-white">Featured</span>
-                            )}
                           </div>
-                          <h3 className="font-display text-lg font-semibold text-[oklch(0.22_0.04_55)] mb-2 group-hover:text-[oklch(0.48_0.09_152)] transition-colors">
+                          <h3 className="font-display text-lg font-semibold text-evergreen mb-2 group-hover:text-brand-red transition-colors">
                             {event.title}
                           </h3>
-                          <p className="font-body text-sm text-[oklch(0.52_0.04_55)] line-clamp-2 mb-3">
+                          <p className="font-body text-sm text-muted-ink line-clamp-2 mb-3">
                             {event.description}
                           </p>
                           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-auto">
-                            <span className="flex items-center gap-1 font-body text-xs text-[oklch(0.52_0.04_55)]">
-                              <Clock className="w-3 h-3" /> {event.time}
-                            </span>
-                            <span className="flex items-center gap-1 font-body text-xs text-[oklch(0.52_0.04_55)]">
+                            {event.time && (
+                              <span className="flex items-center gap-1 font-body text-xs text-muted-ink">
+                                <Clock className="w-3 h-3" /> {event.time}
+                              </span>
+                            )}
+                            <span className="flex items-center gap-1 font-body text-xs text-muted-ink">
                               <MapPin className="w-3 h-3" /> {event.location}
                             </span>
                             {event.entryFee && (
-                              <span className="flex items-center gap-1 font-body text-xs font-bold text-[oklch(0.65_0.16_48)]">
+                              <span className="flex items-center gap-1 font-body text-xs font-bold text-brand-red">
                                 <DollarSign className="w-3 h-3" /> {event.entryFee}
                               </span>
                             )}
@@ -173,14 +178,15 @@ export default function Events() {
 
                         {/* Arrow */}
                         <div className="hidden sm:flex items-center pr-4">
-                          <ChevronRight className="w-5 h-5 text-[oklch(0.72_0.04_55)] group-hover:text-[oklch(0.48_0.09_152)] transition-colors" />
+                          <ChevronRight className="w-5 h-5 text-sage group-hover:text-brand-red transition-colors" />
                         </div>
                       </article>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))
+                    </a>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
           )}
         </div>
       </main>

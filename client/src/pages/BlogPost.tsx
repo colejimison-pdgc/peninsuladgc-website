@@ -15,12 +15,12 @@ export default function BlogPost() {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex flex-col bg-[oklch(0.97_0.015_85)]">
+      <div className="min-h-screen flex flex-col bg-cream-soft">
         <Navbar />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="font-display text-3xl text-[oklch(0.22_0.04_55)] mb-4">Post Not Found</h1>
-            <Link href="/blog" className="font-body text-[oklch(0.48_0.09_152)] hover:underline">
+            <h1 className="font-display text-3xl text-evergreen mb-4">Post Not Found</h1>
+            <Link href="/blog" className="font-body text-evergreen hover:underline">
               ← Back to Blog
             </Link>
           </div>
@@ -39,7 +39,7 @@ export default function BlogPost() {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.97_0.015_85)]">
+    <div className="min-h-screen flex flex-col bg-cream-soft">
       <Navbar />
 
       {/* ── HERO ── */}
@@ -52,7 +52,7 @@ export default function BlogPost() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-[oklch(0_0_0/0.50)] backdrop-blur-xs md:hidden" />
-            <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-[oklch(0.12_0.04_55)/0.85] via-[oklch(0.12_0.04_55)/0.3] to-transparent" />
+            <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-evergreen-deep/85 via-evergreen-deep/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 container pb-8">
               <div className="md:bg-[oklch(0_0_0/0.40)] md:backdrop-blur-sm rounded-lg p-8 max-w-3xl">
                 <Link href="/blog" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
@@ -73,7 +73,7 @@ export default function BlogPost() {
       )}
 
       {!post.image && (
-        <div className="bg-[oklch(0.22_0.04_55)] pt-28 pb-10">
+        <div className="bg-evergreen pt-28 pb-10">
           <div className="container">
             <Link href="/blog" className="inline-flex items-center gap-1 font-body text-sm text-white/70 hover:text-white mb-4 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Back to News & Blog
@@ -93,42 +93,42 @@ export default function BlogPost() {
             {/* Article */}
             <div className="lg:col-span-2">
               {/* Meta */}
-              <div className="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-[oklch(0.86_0.025_85)]">
-                <div className="flex items-center gap-2 font-body text-sm text-[oklch(0.52_0.04_55)]">
+              <div className="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-brand-border">
+                <div className="flex items-center gap-2 font-body text-sm text-muted-ink">
                   <User className="w-4 h-4" />
-                  <span>By <strong className="text-[oklch(0.35_0.04_55)]">{post.author}</strong></span>
+                  <span>By <strong className="text-ink">{post.author}</strong></span>
                 </div>
-                <div className="flex items-center gap-2 font-body text-sm text-[oklch(0.52_0.04_55)]">
+                <div className="flex items-center gap-2 font-body text-sm text-muted-ink">
                   <Calendar className="w-4 h-4" />
                   <span>{formatDate(post.date)}</span>
                 </div>
-                <div className="flex items-center gap-2 font-body text-sm text-[oklch(0.52_0.04_55)]">
+                <div className="flex items-center gap-2 font-body text-sm text-muted-ink">
                   <Tag className="w-4 h-4" />
                   <span>{categoryLabels[post.category]}</span>
                 </div>
               </div>
 
               {/* Excerpt / lede */}
-              <p className="font-display text-xl text-[oklch(0.35_0.04_55)] leading-relaxed mb-8 italic">
+              <p className="font-display text-xl text-ink leading-relaxed mb-8 italic">
                 {post.excerpt}
               </p>
 
               {/* Body */}
               <div className="prose-custom space-y-5">
                 {post.content.split("\n\n").map((para, i) => (
-                  <p key={i} className="font-body text-[oklch(0.35_0.04_55)] leading-relaxed text-base">
+                  <p key={i} className="font-body text-ink leading-relaxed text-base">
                     {para}
                   </p>
                 ))}
               </div>
 
               {/* Share / CTA */}
-              <div className="mt-12 pt-8 border-t border-[oklch(0.86_0.025_85)]">
+              <div className="mt-12 pt-8 border-t border-brand-border">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <Link href="/blog" className="inline-flex items-center gap-1 font-body text-sm font-bold text-[oklch(0.48_0.09_152)] hover:text-[oklch(0.36_0.09_152)] transition-colors">
+                  <Link href="/blog" className="inline-flex items-center gap-1 font-body text-sm font-bold text-evergreen hover:text-evergreen-deep transition-colors">
                     <ArrowLeft className="w-4 h-4" /> All Posts
                   </Link>
-                  <Link href="/events" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[oklch(0.48_0.09_152)] hover:bg-[oklch(0.36_0.09_152)] text-white font-body text-sm font-bold rounded transition-colors">
+                  <Link href="/events" className="inline-flex items-center gap-2 px-5 py-2.5 bg-evergreen hover:bg-evergreen-deep text-white font-body text-sm font-bold rounded transition-colors">
                     View Upcoming Events <ChevronRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -138,8 +138,8 @@ export default function BlogPost() {
             {/* Sidebar */}
             <div className="lg:col-span-1 space-y-6">
               {/* Related posts */}
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-[oklch(0.86_0.025_85)]">
-                <h3 className="font-display text-lg font-semibold text-[oklch(0.22_0.04_55)] mb-4">
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-brand-border">
+                <h3 className="font-display text-lg font-semibold text-evergreen mb-4">
                   {relatedPosts.length > 0 ? "Related Posts" : "More Posts"}
                 </h3>
                 <div className="space-y-4">
@@ -159,10 +159,10 @@ export default function BlogPost() {
                           <span className={`event-tag ${categoryColors[related.category]} mb-1 inline-block`}>
                             {categoryLabels[related.category]}
                           </span>
-                          <h4 className="font-body text-sm font-bold text-[oklch(0.22_0.04_55)] group-hover:text-[oklch(0.48_0.09_152)] transition-colors line-clamp-2 leading-snug">
+                          <h4 className="font-body text-sm font-bold text-evergreen group-hover:text-brand-red transition-colors line-clamp-2 leading-snug">
                             {related.title}
                           </h4>
-                          <p className="font-mono-brand text-[10px] text-[oklch(0.52_0.04_55)] mt-1">
+                          <p className="font-mono-brand text-[10px] text-muted-ink mt-1">
                             {formatShortDate(related.date)}
                           </p>
                         </div>
@@ -173,14 +173,14 @@ export default function BlogPost() {
               </div>
 
               {/* Club CTA */}
-              <div className="bg-[oklch(0.22_0.04_55)] rounded-lg p-6 text-white">
+              <div className="bg-evergreen rounded-lg p-6 text-white">
                 <h3 className="font-display text-lg font-semibold mb-2">Join the Club</h3>
                 <p className="font-body text-sm text-white/70 mb-4">
                   Become a member and support disc golf on the Peninsula.
                 </p>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[oklch(0.65_0.16_48)] hover:bg-[oklch(0.52_0.16_48)] text-white font-body text-sm font-bold rounded transition-colors w-full justify-center"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-red hover:bg-brand-red-dark text-white font-body text-sm font-bold rounded transition-colors w-full justify-center"
                 >
                   Learn More <ChevronRight className="w-4 h-4" />
                 </Link>

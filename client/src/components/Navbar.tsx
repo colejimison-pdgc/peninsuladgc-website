@@ -8,13 +8,12 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 
-const LOGO_IMAGE = "/images/pdgc-logo-clean_elkhead.png";
+const LOGO_IMAGE = "/logos/PDGC_PrimaryHorz_OneColor_White_72ppi.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "News & Blog" },
 ];
 
 export default function Navbar() {
@@ -27,12 +26,12 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[oklch(0.22_0.04_55)] shadow-lg"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-evergreen shadow-lg"
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <img src={LOGO_IMAGE} alt="Peninsula Disc Golf Club" className="h-12 w-auto group-hover:scale-105 transition-transform" />
+          <img src={LOGO_IMAGE} alt="Peninsula Disc Golf Club" className="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform" />
         </Link>
 
         {/* Desktop Nav */}
@@ -43,19 +42,19 @@ export default function Navbar() {
               href={link.href}
               className={`px-4 py-2 font-body text-sm font-700 tracking-wide transition-colors rounded-sm relative group ${
                 location === link.href
-                  ? "text-[oklch(0.65_0.16_48)]"
+                  ? "text-cream"
                   : "text-white/80 hover:text-white"
               }`}
             >
               {link.label}
               {location === link.href && (
-                <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-[oklch(0.65_0.16_48)] rounded-full" />
+                <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-brand-red rounded-full" />
               )}
             </Link>
           ))}
           <Link
             href="/events"
-            className="ml-4 px-5 py-2 bg-[oklch(0.65_0.16_48)] hover:bg-[oklch(0.52_0.16_48)] text-white font-body text-sm font-bold rounded transition-colors"
+            className="ml-4 px-5 py-2 bg-brand-red hover:bg-brand-red-dark text-white font-body text-sm font-bold rounded transition-colors"
           >
             Join a Round
           </Link>
@@ -73,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[oklch(0.22_0.04_55)] border-t border-white/10 pb-4">
+        <div className="md:hidden bg-evergreen border-t border-white/10 pb-4">
           <nav className="container flex flex-col gap-1 pt-2">
             {navLinks.map((link) => (
               <Link
@@ -81,7 +80,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3 py-3 font-body text-base transition-colors border-b border-white/5 ${
                   location === link.href
-                    ? "text-[oklch(0.65_0.16_48)] font-bold"
+                    ? "text-cream font-bold"
                     : "text-white/80 hover:text-white"
                 }`}
               >
@@ -90,7 +89,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/events"
-              className="mt-3 px-5 py-3 bg-[oklch(0.65_0.16_48)] hover:bg-[oklch(0.52_0.16_48)] text-white font-body text-sm font-bold rounded text-center transition-colors"
+              className="mt-3 px-5 py-3 bg-brand-red hover:bg-brand-red-dark text-white font-body text-sm font-bold rounded text-center transition-colors"
             >
               Join a Round
             </Link>

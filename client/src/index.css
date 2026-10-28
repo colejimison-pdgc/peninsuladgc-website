@@ -1,6 +1,6 @@
 /* ============================================================
    DESIGN SYSTEM: Outdoor Adventure Editorial
-   Palette: Moss Green (#4a7c59) + Sunset Orange (#e07b39)
+   Palette: Evergreen (#042e24) + Heritage Red (#951816) + Warm Cream (#ede1ca)
    Fonts: Fraunces (display) · Lato (body) · IBM Plex Mono (labels)
    Mood: Warm, community-focused, editorial, tactile
    ============================================================ */
@@ -49,50 +49,56 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* Custom brand tokens */
-  --color-moss: oklch(0.48 0.09 152);
-  --color-moss-dark: oklch(0.36 0.09 152);
-  --color-moss-light: oklch(0.72 0.07 152);
-  --color-sunset: oklch(0.65 0.16 48);
-  --color-sunset-dark: oklch(0.52 0.16 48);
-  --color-cream: oklch(0.97 0.015 85);
-  --color-espresso: oklch(0.22 0.04 55);
-  --color-parchment: oklch(0.94 0.02 85);
+  --color-evergreen: #042e24;
+  --color-evergreen-deep: #021f18;
+  --color-evergreen-soft: #2a4c34;
+  --color-brand-red: #951816;
+  --color-brand-red-dark: #74110f;
+  --color-cream: #ede1ca;
+  --color-cream-soft: #faf7ef;
+  --color-parchment: #ede1ca;
+  --color-sage: #98af95;
+  --color-sage-soft: #e2e9df;
+  --color-olive: #6a8559;
+  --color-ink: #2a4c34;
+  --color-muted-ink: #5c6f64;
+  --color-brand-border: #d2dbcf;
 }
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.97 0.015 85);
-  --foreground: oklch(0.22 0.04 55);
-  --card: oklch(1 0.008 85);
-  --card-foreground: oklch(0.22 0.04 55);
-  --popover: oklch(1 0.008 85);
-  --popover-foreground: oklch(0.22 0.04 55);
-  --primary: oklch(0.48 0.09 152);
-  --primary-foreground: oklch(0.97 0.015 85);
-  --secondary: oklch(0.90 0.025 85);
-  --secondary-foreground: oklch(0.35 0.06 55);
-  --muted: oklch(0.92 0.018 85);
-  --muted-foreground: oklch(0.52 0.04 55);
-  --accent: oklch(0.65 0.16 48);
-  --accent-foreground: oklch(0.97 0.015 85);
+  --background: #faf7ef;
+  --foreground: #042e24;
+  --card: #ffffff;
+  --card-foreground: #042e24;
+  --popover: #ffffff;
+  --popover-foreground: #042e24;
+  --primary: #042e24;
+  --primary-foreground: #faf7ef;
+  --secondary: #e2e9df;
+  --secondary-foreground: #2a4c34;
+  --muted: #ede1ca;
+  --muted-foreground: #5c6f64;
+  --accent: #951816;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.86 0.025 85);
-  --input: oklch(0.86 0.025 85);
-  --ring: oklch(0.48 0.09 152);
-  --chart-1: oklch(0.48 0.09 152);
-  --chart-2: oklch(0.65 0.16 48);
-  --chart-3: oklch(0.72 0.07 152);
-  --chart-4: oklch(0.36 0.09 152);
-  --chart-5: oklch(0.52 0.16 48);
-  --sidebar: oklch(0.22 0.04 55);
-  --sidebar-foreground: oklch(0.97 0.015 85);
-  --sidebar-primary: oklch(0.65 0.16 48);
-  --sidebar-primary-foreground: oklch(0.97 0.015 85);
-  --sidebar-accent: oklch(0.36 0.09 152);
-  --sidebar-accent-foreground: oklch(0.97 0.015 85);
-  --sidebar-border: oklch(0.32 0.05 55);
-  --sidebar-ring: oklch(0.65 0.16 48);
+  --border: #d2dbcf;
+  --input: #d2dbcf;
+  --ring: #951816;
+  --chart-1: #042e24;
+  --chart-2: #951816;
+  --chart-3: #98af95;
+  --chart-4: #6a8559;
+  --chart-5: #74110f;
+  --sidebar: #021f18;
+  --sidebar-foreground: #faf7ef;
+  --sidebar-primary: #951816;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2a4c34;
+  --sidebar-accent-foreground: #faf7ef;
+  --sidebar-border: #2a4c34;
+  --sidebar-ring: #951816;
 }
 
 @layer base {
@@ -172,7 +178,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: oklch(0.65 0.16 48);
+    background: #951816;
     border-radius: 2px;
     transform: scaleX(0);
     transform-origin: left;
@@ -185,7 +191,7 @@
 
   /* Topographic texture overlay */
   .topo-bg {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath d='M0 200 Q100 150 200 200 Q300 250 400 200' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M0 180 Q100 130 200 180 Q300 230 400 180' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0 220 Q100 170 200 220 Q300 270 400 220' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0 160 Q100 110 200 160 Q300 210 400 160' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.04'/%3E%3Cpath d='M0 240 Q100 190 200 240 Q300 290 400 240' stroke='%234a7c59' stroke-width='1' fill='none' opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath d='M0 200 Q100 150 200 200 Q300 250 400 200' stroke='%23042e24' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M0 180 Q100 130 200 180 Q300 230 400 180' stroke='%23042e24' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0 220 Q100 170 200 220 Q300 270 400 220' stroke='%23042e24' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0 160 Q100 110 200 160 Q300 210 400 160' stroke='%23042e24' stroke-width='1' fill='none' opacity='0.04'/%3E%3Cpath d='M0 240 Q100 190 200 240 Q300 290 400 240' stroke='%23042e24' stroke-width='1' fill='none' opacity='0.04'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 400px 400px;
   }
@@ -244,7 +250,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 30px;
-    border-top: 3px solid oklch(0.65 0.16 48);
+    border-top: 3px solid #951816;
     border-radius: 50% 50% 0 0;
     opacity: 0.6;
   }
