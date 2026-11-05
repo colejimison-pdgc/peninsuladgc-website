@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 
 const ABOUT_IMAGE = "/images/eh_devin_hole4.jpg";
 const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/community-event-D6xB3opW72GX3UimDuQH5d.webp";
+const LOGO_IMAGE = "/logos/PDGC_Primary_Stacked_FullColor_72ppi.png";
 
 const values = [
   {
@@ -92,7 +93,14 @@ export default function About() {
             </p>
           </div>
 
-
+          <div className="hidden lg:flex justify-center">
+            <img
+              src={LOGO_IMAGE}
+              alt="Peninsula Disc Golf Club"
+              loading="lazy"
+              className="w-full max-w-md h-auto"
+            />
+          </div>
         </div>
       </section>
 
