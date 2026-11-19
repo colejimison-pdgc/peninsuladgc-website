@@ -405,3 +405,38 @@
 [2026-11-05T02:44:02.490Z] {"timestamp":1793846642302,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-11-05T02:44:02.490Z] {"timestamp":1793846642323,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-11-05T02:44:02.490Z] {"timestamp":1793846642364,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-11-19T23:17:18.875Z] {"timestamp":1795130236869,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-11-19T23:17:18.875Z] {"timestamp":1795130236931,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-11-19T23:17:18.875Z] {"timestamp":1795130237469,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-11-19T23:18:49.194Z] {"timestamp":1795130328999,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:18:49.194Z] {"timestamp":1795130328999,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:18:49.194Z] {"timestamp":1795130329009,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:18:49.194Z] {"timestamp":1795130329009,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:18:49.194Z] {"timestamp":1795130329173,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:18:49.194Z] {"timestamp":1795130329173,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:20:27.197Z] {"timestamp":1795130426397,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:20:27.197Z] {"timestamp":1795130426397,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:23:45.154Z] {"timestamp":1795130618069,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:23:45.154Z] {"timestamp":1795130618070,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:25:20.854Z] {"timestamp":1795130719531,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/About.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 0)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-11-19T23:25:20.854Z] {"timestamp":1795130719583,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:25:20.854Z] {"timestamp":1795130719583,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:25:24.852Z] {"timestamp":1795130724463,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:25:24.852Z] {"timestamp":1795130724463,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791130,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791130,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791225,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791225,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791370,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791417,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791417,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791526,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:26:33.176Z] {"timestamp":1795130791526,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:27:00.848Z] {"timestamp":1795130819317,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:27:00.848Z] {"timestamp":1795130819318,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-11-19T23:27:00.848Z] {"timestamp":1795130819360,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:27:00.848Z] {"timestamp":1795130819360,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:27:30.849Z] {"timestamp":1795130849628,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-11-19T23:27:30.849Z] {"timestamp":1795130849628,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-11-19T23:29:44.359Z] {"timestamp":1795130979316,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/About.tsx"],"stack":null}
+[2026-11-19T23:29:44.359Z] {"timestamp":1795130979316,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}

@@ -4,8 +4,9 @@
 // Sections: Mission, Values, History, Board Members, Membership
 // ============================================================
 
+import { useEffect } from "react";
 import { Link } from "wouter";
-import { Heart, TreePine, Users, TrendingUp, ArrowRight, Mail } from "lucide-react";
+import { Heart, TreePine, Users, TrendingUp, ArrowRight, Mail, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -36,6 +37,25 @@ const values = [
   },
 ];
 
+const courses = [
+  {
+    name: "Emerald Hills Golf Course",
+    image: "/images/eh-1.jpg",
+    udiscUrl: "https://udisc.com/courses/emerald-hills-golf-course-GDDQ",
+    established: 2015,
+    description:
+      "Nestled in the scenic hills above Redwood City, Emerald Hills Golf Course offers 19 holes of disc golf alongside a traditional 9-hole golf course. With rolling fairways, challenging elevation changes, and beautiful Peninsula views, this course offers a unique experience for players of all skill levels.",
+  },
+  {
+    name: "Coyote Point Disc Golf Course",
+    image: "/images/coyote-point-1.jpg",
+    udiscUrl: "https://udisc.com/courses/coyote-point-disc-golf-course-2TCY",
+    established: 2026,
+    description:
+      "Situated within the Coyote Point Recreation Area, the Coyote Point Disc Golf Course is run by San Mateo County Parks. This 9-hole track offers fun shots for all skills levels as well as stunning views of San Francisco Bay.",
+  },
+];
+
 // Initials avatar colors
 const avatarColors = [
   "bg-evergreen",
@@ -51,6 +71,14 @@ function getInitials(name: string) {
 }
 
 export default function About() {
+  // Wouter doesn't scroll to hash anchors on client-side navigation,
+  // so handle links like /about#courses manually.
+  useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    document.getElementById(id)?.scrollIntoView();
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-cream-soft">
       <Navbar />
@@ -104,8 +132,50 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── OUR COURSES ── */}
+      <section id="courses" className="py-20 topo-bg bg-parchment scroll-mt-16 md:scroll-mt-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <p className="font-mono-brand text-[11px] tracking-widest uppercase text-brand-red mb-2">Where We Play</p>
+            <h2 className="font-display text-4xl font-semibold text-evergreen">Our Courses</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {courses.map(({ name, image, udiscUrl, established, description }) => (
+              <div
+                key={name}
+                className="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm border border-brand-border"
+              >
+                <img
+                  src={image}
+                  alt={name}
+                  loading="lazy"
+                  className="w-full aspect-[16/10] object-cover"
+                />
+                <div className="flex flex-col flex-1 p-8">
+                  <p className="font-mono-brand text-[11px] tracking-widest uppercase text-brand-red mb-2">
+                    Est. {established}
+                  </p>
+                  <h3 className="font-display text-2xl font-semibold text-evergreen mb-3">{name}</h3>
+                  {description && (
+                    <p className="font-body text-ink leading-relaxed mb-6">{description}</p>
+                  )}
+                  <a
+                    href={udiscUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto self-start inline-flex items-center gap-2 px-5 py-2.5 bg-brand-red hover:bg-brand-red-dark text-white font-body font-bold rounded transition-colors text-sm"
+                  >
+                    View on UDisc <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── VALUES ── */}
-      <section className="py-20 topo-bg bg-parchment">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
             <p className="font-mono-brand text-[11px] tracking-widest uppercase text-brand-red mb-2">What We Stand For</p>
@@ -115,7 +185,7 @@ export default function About() {
             {values.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="bg-white rounded-lg p-6 shadow-sm border border-brand-border hover:shadow-md transition-shadow"
+                className="bg-cream-soft rounded-lg p-6 shadow-sm border border-brand-border hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 rounded-full bg-parchment flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-evergreen" />
@@ -129,7 +199,7 @@ export default function About() {
       </section>
 
       {/* ── CONTACT ── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 topo-bg bg-parchment">
         <div className="container max-w-2xl">
           <div className="text-center mb-12">
             <p className="font-mono-brand text-[11px] tracking-widest uppercase text-brand-red mb-2">Get in Touch</p>
@@ -139,15 +209,15 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-parchment rounded-lg p-8 border border-brand-border">
+          <div className="bg-white rounded-lg p-8 border border-brand-border shadow-sm">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-full bg-evergreen flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
                 <p className="font-mono-brand text-[10px] tracking-widest uppercase text-brand-red mb-1">Email</p>
-                <a href="mailto:pdgcinfo@peninsuladgc.org" className="font-body text-lg font-bold text-evergreen hover:text-brand-red transition-colors">
-                  pdgcinfo@peninsuladgc.org
+                <a href="mailto:info@peninsuladgc.org" className="font-body text-lg font-bold text-evergreen hover:text-brand-red transition-colors">
+                  info@peninsuladgc.org
                 </a>
               </div>
             </div>

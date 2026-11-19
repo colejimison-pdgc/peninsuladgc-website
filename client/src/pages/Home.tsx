@@ -14,9 +14,9 @@ const HERO_IMAGE = "/images/harrison_hole2.jpg";
 const ACTION_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/action-throw-8i7pxpEA3rThZDTMFnR7Xm.webp";
 const COMMUNITY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663521680723/4LmVc63AAJJPPDnm7ZNEvC/community-event-D6xB3opW72GX3UimDuQH5d.webp";
 
-const stats = [
+const stats: { icon: typeof Users; value: string; label: string; href?: string }[] = [
   { icon: Users, value: "1,000+", label: "Active Members" },
-  { icon: TreePine, value: "2", label: "Courses" },
+  { icon: TreePine, value: "2", label: "Courses", href: "/about#courses" },
 ];
 
 export default function Home() {
@@ -73,13 +73,31 @@ export default function Home() {
       <section className="bg-evergreen py-10">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
-            {stats.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex flex-col items-center text-center gap-2">
-                <Icon className="w-6 h-6 text-sage" />
-                <span className="font-display text-3xl font-semibold text-white">{value}</span>
-                <span className="font-mono-brand text-[10px] tracking-widest uppercase text-white/50">{label}</span>
-              </div>
-            ))}
+            {stats.map(({ icon: Icon, value, label, href }) => {
+              const content = (
+                <>
+                  <Icon className="w-6 h-6 text-sage" />
+                  <span className="font-display text-3xl font-semibold text-white">{value}</span>
+                  <span className="font-mono-brand text-[10px] tracking-widest uppercase text-white/50 group-hover:text-white/80 transition-colors">
+                    {label}
+                  </span>
+                </>
+              );
+              const className = "flex flex-col items-center text-center gap-2";
+              return href ? (
+                <Link
+                  key={label}
+                  href={href}
+                  className={`${className} group justify-self-center rounded-lg px-6 py-2 hover:bg-white/5 transition-colors`}
+                >
+                  {content}
+                </Link>
+              ) : (
+                <div key={label} className={className}>
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

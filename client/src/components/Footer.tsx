@@ -48,8 +48,8 @@ export default function Footer() {
           <ul className="space-y-3">
             <li className="flex items-center gap-2 font-body text-sm text-white/60">
               <Mail className="w-4 h-4 text-sage flex-shrink-0" />
-              <a href="mailto:pdgcinfo@peninsuladgc.org" className="hover:text-cream transition-colors">
-                pdgcinfo@peninsuladgc.org
+              <a href="mailto:info@peninsuladgc.org" className="hover:text-cream transition-colors">
+                info@peninsuladgc.org
               </a>
             </li>
           </ul>
